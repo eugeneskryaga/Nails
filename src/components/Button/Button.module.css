@@ -1,0 +1,29 @@
+.button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 20px;
+    background-color: var(--color-background);
+    border-radius: 40px;
+    border: 1px solid var(--color-border);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 200ms ease;
+}
+
+.primary {
+    color: var(--color-card);
+    background-color: var(--color-foreground);
+}
+
+.primary:hover {
+    scale: 1.05;
+}
+
+.secondary {
+    color: var(--color-foreground);
+}
+
+.secondary:hover {
+    background-color: var(--color-secondary);
+}

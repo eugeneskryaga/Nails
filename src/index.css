@@ -1,0 +1,53 @@
+:root {
+  --color-background: #f8f6f1;
+  --color-card: #ffffff;
+  --color-muted: #efeee6;
+  --color-primary: #899b7d;
+  --color-foreground: #2e2e2e; 
+  --color-secondary: #eae7dc;
+  --color-border: #e2ded4;
+  --color-text: #766b60;
+
+  --font-heading: 'Cormorant Garamond', serif;
+  --font-main: 'Plus Jakarta Sans', sans-serif;
+
+  --font-size-base: 1rem;
+  --line-height-base: 1.5;
+}
+
+body {
+  font-family: var(--font-main);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--color-text);
+  background-color: var(--color-background);
+  position: relative;
+}
+
+h1, h2, h3, strong {
+  font-family: var(--font-heading);
+  color: var(--color-foreground);
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+p {
+  margin: 0;
+}
+
+address {
+  font-style: normal;
+  font-weight: normal;
+  line-height: inherit;
+}
