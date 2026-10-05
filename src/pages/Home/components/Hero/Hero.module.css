@@ -1,5 +1,7 @@
 .hero {
     display: flex;
+    margin-top: 160px;
+    margin-bottom: 200px;
 }
 
 .hero span {
@@ -30,4 +32,33 @@
 .buttons {
     display: flex;
     gap: 10px;
+}
+
+.image {
+    position: relative;
+}
+
+.image img{
+    border-radius: 40px;
+}
+
+.exp {
+    position: absolute;
+    background-color: var(--color-card);
+    width: 120px;
+    padding: 20px;
+    border-radius: 20px;
+    bottom: -20px;
+    left: -30px;
+    font-size: 12px;
+    border: 1px solid var(--color-border);
+}
+
+.exp span {
+    font-family: var(--font-heading);
+    font-size: 30px;
+    color: var(--color-primary);
+    padding: 0;
+    background-color: var(--color-card);
+    margin: 0;
 }

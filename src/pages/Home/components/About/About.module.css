@@ -1,0 +1,36 @@
+.about h2 {
+    text-align: center;
+    font-size: 46px;
+    margin-bottom: 30px;
+}
+
+.about p {
+    text-align: center;
+    letter-spacing: 4%;
+    line-height: 2;
+}
+
+.about_list {
+    display: flex;
+    justify-content: space-between;
+    margin: 50px 0;
+}
+
+.about_list li {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--color-card);
+    border: 1px solid var(--color-border);
+    border-radius: 20px;
+    width: 300px;
+}
+
+.about_list li p:last-of-type {
+    font-size: 14px;
+}
+
+.about_list svg {
+    padding: 10px;
+    background-color: var(--color-secondary);
+    border-radius: 40px;
+}

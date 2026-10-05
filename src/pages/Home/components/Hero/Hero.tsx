@@ -12,12 +12,13 @@ export const Hero = () => {
           <div className={css.article}>
             <span>
               <FaStar />
-              СТУДИЯ МАНИКЮРА
+              NAIL STUDIO
             </span>
-            <h1>Маникюр, в котором чувствуется забота</h1>
+            <h1>Manicure that feels like care</h1>
             <p>
-              Тёплая атмосфера, натуральные материалы и безупречный результатю
-              Запишитесь на удобное время - всё уже продумано за вас.
+              A warm atmosphere, natural materials, and flawless results. Book a
+              time that works for you — everything has already been thoughtfully
+              taken care of.
             </p>
             <div className={css.buttons}>
               <Link to="/contacts">
@@ -25,21 +26,25 @@ export const Hero = () => {
                   styles="primary"
                   className={css.arrow_btn}
                 >
-                  Записаться <FaArrowRight />
+                  Book now <FaArrowRight size={14} />
                 </Button>
               </Link>
               <Link to="/gallery">
-                <Button styles="secondary">Смотреть работы</Button>
+                <Button styles="secondary">View portfolio</Button>
               </Link>
             </div>
           </div>
           <div className={css.image}>
             <img
-              src="/src/assets/Logo.png"
+              src="/src/assets/hero.jpg"
               alt="Logo"
               width={500}
-              height={500}
+              height={600}
             />
+            <div className={css.exp}>
+              <span>2+</span>
+              <p>Years of experience</p>
+            </div>
           </div>
         </div>
       </Container>

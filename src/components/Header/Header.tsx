@@ -22,7 +22,7 @@ export const Header = () => {
                   isActive ? `${css.active}` : `${css.link}`
                 }
               >
-                Главная
+                Home
               </NavLink>
             </li>
             <li>
@@ -32,7 +32,7 @@ export const Header = () => {
                   isActive ? `${css.active}` : `${css.link}`
                 }
               >
-                Галерея
+                Gallery
               </NavLink>
             </li>
             <li>
@@ -42,7 +42,7 @@ export const Header = () => {
                   isActive ? `${css.active}` : `${css.link}`
                 }
               >
-                Контакты
+                Contacts
               </NavLink>
             </li>
           </ul>

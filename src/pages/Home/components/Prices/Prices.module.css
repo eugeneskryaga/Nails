@@ -1,0 +1,59 @@
+.prices {
+    background-color: var(--color-secondary);
+    margin-bottom: 100px;
+    padding: 60px 0;
+}
+
+.prices h2 {
+    text-align: center;
+    font-size: 46px;
+    margin-bottom: 10px;
+}
+
+.slogan {
+    text-align: center;
+    letter-spacing: 4%;
+    margin-bottom: 40px;
+}
+
+.prices_list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.prices_list_item {
+    background-color: var(--color-card);
+    padding: 30px;
+    border-radius: 20px;
+    border: 1px solid var(--color-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.prices_list_item h3 {
+    font-size: 26px;
+    letter-spacing: 4%;
+    margin-bottom: 10px;
+}
+
+.prices_list_item p {
+    margin-bottom: 10px;
+}
+
+.prices_list_item span {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.prices_list_item strong {
+    font-size: 36px;
+}
+
+.prices button {
+    margin: 0 auto;
+}

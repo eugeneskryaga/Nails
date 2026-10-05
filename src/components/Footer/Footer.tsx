@@ -4,9 +4,8 @@ import css from "./Footer.module.css";
 import {
   FaInstagram,
   FaPhone,
-  FaTelegram,
   FaTelegramPlane,
-  FaViber,
+  FaWhatsapp,
 } from "react-icons/fa";
 import { FaLocationPin } from "react-icons/fa6";
 
@@ -22,48 +21,57 @@ export const Footer = () => {
               width={70}
               height={70}
             />
-            <p>Студия маникюра, где каждаю деталь продумана.</p>
-            <p>Тёплая атмосфера и безупречный результат.</p>
+            <p>A nail studio where every detail is thoughtfully considered.</p>
+            <p>A warm atmosphere and flawless results.</p>
           </div>
           <div>
-            <strong>НАВИГАЦИЯ</strong>
+            <strong>NAVIGATION</strong>
             <ul>
               <li>
-                <Link to="/">Главная</Link>
+                <Link to="/">Home</Link>
               </li>
               <li>
-                <Link to="/gallery">Галерея</Link>
+                <Link to="/gallery">Gallery</Link>
               </li>
               <li>
-                <Link to="/contacts">Контакты</Link>
+                <Link to="/contacts">Contacts</Link>
               </li>
             </ul>
           </div>
           <div>
             <address>
-              <strong>СВЯЗЬ</strong>
-              <a href="tel:+380995327811">
+              <strong>CONTACTS</strong>
+              <a href="tel:4916099112785">
                 <FaPhone
                   size={14}
                   className={css.icon}
                 />
-                +38 (099) 532-78-11
+                +4 916 099 112 785
               </a>
               <div className={css.location}>
                 <FaLocationPin
                   size={14}
                   className={css.icon}
                 />
-                Киев, ул. Примерная 12
+                Wuppertal Gathe 70, 42107
               </div>
               <div className={css.social}>
-                <a>
+                <a
+                  href="https://www.instagram.com/nails_pro_deutschland?stkn=Z3ZxZ2s5bHZzcGlp"
+                  target="_blank"
+                >
                   <FaInstagram size={40} />
                 </a>
-                <a>
-                  <FaViber size={40} />
+                <a
+                  href="https://wa.me/4916099112785"
+                  target="_blank"
+                >
+                  <FaWhatsapp size={40} />
                 </a>
-                <a>
+                <a
+                  href="https://t.me/NailsWuppertal"
+                  target="_blank"
+                >
                   <FaTelegramPlane size={40} />
                 </a>
               </div>
@@ -74,7 +82,7 @@ export const Footer = () => {
           href="/"
           className={css.admin}
         >
-          Вход для администратора
+          Admin login
         </a>
       </Container>
     </footer>
