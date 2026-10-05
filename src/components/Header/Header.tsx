@@ -1,7 +1,9 @@
 import { NavLink } from "react-router-dom";
+import { Container } from "../Container/Container";
+
+import logo from "../../assets/Logo.png";
 
 import css from "./Header.module.css";
-import { Container } from "../Container/Container";
 
 export const Header = () => {
   return (
@@ -9,7 +11,7 @@ export const Header = () => {
       <Container>
         <nav className={css.nav}>
           <img
-            src="/src/assets/Logo.png"
+            src={logo}
             alt="Logo"
             width={50}
             height={50}

@@ -1,8 +1,11 @@
 import { Container } from "../../../../components/Container/Container";
 import { FaArrowRight, FaStar } from "react-icons/fa";
-import css from "./Hero.module.css";
 import { Button } from "../../../../components/Button/Button";
 import { Link } from "react-router-dom";
+
+import heroImage from "../../../../assets/hero.jpg";
+
+import css from "./Hero.module.css";
 
 export const Hero = () => {
   return (
@@ -36,7 +39,7 @@ export const Hero = () => {
           </div>
           <div className={css.image}>
             <img
-              src="/src/assets/hero.jpg"
+              src={heroImage}
               alt="Logo"
               width={500}
               height={600}

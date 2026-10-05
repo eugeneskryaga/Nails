@@ -8,6 +8,7 @@ import {
   FaWhatsapp,
 } from "react-icons/fa";
 import { FaLocationPin } from "react-icons/fa6";
+import logo from "../../assets/Logo.png";
 
 export const Footer = () => {
   return (
@@ -16,7 +17,7 @@ export const Footer = () => {
         <div className={css.wrapper}>
           <div>
             <img
-              src="/src/assets/Logo.png"
+              src={logo}
               alt="Logo"
               width={70}
               height={70}
