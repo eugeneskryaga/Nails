@@ -1,0 +1,34 @@
+.gallery {
+  margin-top: 240px;
+  margin-bottom: 100px;
+}
+
+.gallery_block {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin-bottom: 30px;
+
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  img {
+    width: 300px;
+    height: 356px;
+    border-radius: 40px;
+  }
+}
+
+.video_wrapper {
+  border-radius: 40px;
+  overflow: hidden;
+  width: 400px;
+  height: 100%;
+}
+
+.img_wrapper img:first-of-type {
+  margin-bottom: 20px;
+}

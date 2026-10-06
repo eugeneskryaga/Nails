@@ -7,19 +7,20 @@ import {
 import { Container } from "../../components/Container/Container";
 import css from "./Contacts.module.css";
 import { FaLocationPin } from "react-icons/fa6";
+import { Heading } from "../../components/Heading/Heading";
 
 export const Contacts = () => {
+  const heading = {
+    span: "GET IN TOUCH",
+    title: "Contacts",
+    slogan:
+      "Choose the most convenient way to reach me — I’ll get back to you quickly and be happy to help.",
+  };
+
   return (
     <section className={css.contacts}>
       <Container>
-        <div className={css.heading}>
-          <span>GET IN TOUCH</span>
-          <h1>Contacts</h1>
-          <p>
-            Choose the most convenient way to reach me — I’ll get back to you
-            quickly and be happy to help.
-          </p>
-        </div>
+        <Heading {...heading} />
         <div className={css.contacts_cards}>
           <a href="tel:4916099112785">
             <div className={css.card}>

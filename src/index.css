@@ -50,3 +50,7 @@ address {
   font-weight: normal;
   line-height: inherit;
 }
+
+img, video {
+  display: block;
+}

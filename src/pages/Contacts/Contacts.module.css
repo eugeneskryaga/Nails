@@ -2,24 +2,6 @@
     margin-top: 240px;
 }
 
-.heading {
-    text-align: center;
-}
-
-.heading span {
-    letter-spacing: 4%;
-    margin-bottom: 40px;
-}
-
-.heading h1 {
-    font-size: 56px;
-    margin-bottom: 10px;
-}
-
-.heading p {
-    margin-bottom: 40px;
-}
-
 .contacts_cards {
     display: flex;
     flex-wrap: wrap;
