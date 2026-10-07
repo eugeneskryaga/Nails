@@ -63,3 +63,25 @@
         color: var(--color-card)
     }
 }
+
+@media (min-width: 768px) and (max-width: 998px) {
+    .contacts {
+        margin-top: 180px;
+    }
+
+    .contacts_cards {
+        gap: 10px;
+    }
+
+    .card {
+        width: 350px;
+        height: 178px;
+        padding: 14px;
+    }
+
+    .location {
+        width: 710px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}

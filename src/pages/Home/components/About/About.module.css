@@ -34,3 +34,9 @@
     background-color: var(--color-secondary);
     border-radius: 40px;
 }
+
+@media (min-width: 768px) and (max-width: 959px) {
+    .about_list li {
+        width: 240px;
+    }
+}

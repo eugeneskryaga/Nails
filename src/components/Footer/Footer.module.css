@@ -69,3 +69,9 @@
     margin-left: auto;
     font-size: 12px;
 }
+
+@media (min-width: 768px) and (max-width: 959px) {
+    .slogan {
+        width: 300px;
+    }
+}

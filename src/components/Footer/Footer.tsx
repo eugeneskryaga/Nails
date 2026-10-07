@@ -15,7 +15,7 @@ export const Footer = () => {
     <footer className={css.footer}>
       <Container>
         <div className={css.wrapper}>
-          <div>
+          <div className={css.slogan}>
             <img
               src={logo}
               alt="Logo"

@@ -41,8 +41,6 @@ export const Hero = () => {
             <img
               src={heroImage}
               alt="Logo"
-              width={500}
-              height={600}
             />
             <div className={css.exp}>
               <span>2+</span>

@@ -36,10 +36,13 @@
 
 .image {
     position: relative;
+    height: fit-content;
 }
 
 .image img{
     border-radius: 40px;
+    width: 500px;
+    height: 600px;
 }
 
 .exp {
@@ -61,4 +64,23 @@
     padding: 0;
     background-color: var(--color-card);
     margin: 0;
+}
+
+@media (min-width: 768px) and (max-width: 959px) {
+    .hero {
+        margin-bottom: 60px;
+    }
+
+    .image img {
+        width: 400px;
+        height: 500px;
+    }
+
+    .exp {
+        bottom: -40px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
 }
