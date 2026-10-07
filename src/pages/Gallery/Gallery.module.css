@@ -32,3 +32,19 @@
 .img_wrapper img:first-of-type {
   margin-bottom: 20px;
 }
+
+@media (max-width: 767px) {
+  .gallery {
+    margin-top: 160px;
+  }
+
+  .gallery_block {
+    flex-direction: column;
+    align-items: center;
+
+    .video_wrapper {
+      width: 320px;
+
+    }
+  }
+}

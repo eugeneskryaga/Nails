@@ -75,3 +75,21 @@
         width: 300px;
     }
 }
+
+@media (max-width: 768px) {
+    .wrapper {
+        flex-direction: column;
+    }
+
+    .wrapper ul {
+        gap: 10px;
+    }
+
+    .slogan {
+        margin-bottom: 20px;
+    }
+
+    .location {
+        margin: 20px 0;
+    }
+}

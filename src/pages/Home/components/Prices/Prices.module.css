@@ -52,8 +52,29 @@
 
 .prices_list_item strong {
     font-size: 36px;
+    color: var(--color-primary)
 }
 
 .prices button {
     margin: 0 auto;
+}
+
+@media (max-width: 767px) {
+    .prices {
+        margin-bottom: 60px;
+    }
+
+    .prices_list_item {
+        padding: 30px 10px;
+        align-items: flex-start;
+    }
+
+    .prices_list_item div:first-of-type {
+        width: 180px;
+    }
+
+    .prices_list_item strong {
+        font-size: 30px;
+    }
+
 }

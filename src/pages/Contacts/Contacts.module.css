@@ -85,3 +85,18 @@
         margin-right: auto;
     }
 }
+
+@media (max-width: 767px) {
+    .contacts {
+        margin-top: 160px;
+    }
+
+    .card {
+        width: 340px;
+        padding: 14px;
+    }
+
+    .location {
+        margin-bottom: 100px;
+    }
+}

@@ -37,7 +37,7 @@
 }
 
 .link {
-    padding: 6px 14px;
+    padding: 20px 14px;
     border-radius: 8px;
     background-color: transparent;
     transition: all 200ms ease;
@@ -47,4 +47,18 @@
     padding: 10px 20px;
     border-radius: 20px;
     background-color: var(--color-secondary);
+}
+
+@media (max-width: 767px) {
+    .nav {
+        width: 100%;
+        margin-top: 40px;
+        border-radius: 0;
+        top: 0;
+        gap: 10px;
+    }
+
+    .nav_list {
+        gap: 10px;
+    }
 }

@@ -79,8 +79,31 @@
     .exp {
         bottom: -40px;
     }
+}
 
+@media (max-width: 959px) {
     .buttons {
-        flex-direction: column;
+         flex-direction: column;
     }
+}
+
+@media (max-width: 767px) {
+    .hero {
+        margin-top: 140px;
+        flex-direction: column;
+        margin-bottom: 100px;
+    }
+
+    .image img {
+        width: 320px;
+        height: 420px;
+        margin-top: 10px;
+    }
+
+    .exp {
+        bottom: -80px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
 }

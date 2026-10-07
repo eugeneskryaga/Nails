@@ -15,6 +15,10 @@
   --line-height-base: 1.5;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-main);
   font-size: var(--font-size-base);
