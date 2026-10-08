@@ -7,7 +7,7 @@ import css from "./Header.module.css";
 import { useAuth } from "../../context/AuthContext";
 
 export const Header = () => {
-  const { user, logout } = useAuth();
+  const { user } = useAuth();
   const isAdmin = user?.email === import.meta.env.VITE_ADMIN_EMAIL;
 
   return (
