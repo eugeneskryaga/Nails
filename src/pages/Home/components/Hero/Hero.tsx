@@ -43,7 +43,7 @@ export const Hero = () => {
               alt="Logo"
             />
             <div className={css.exp}>
-              <span>2+</span>
+              <span>4+</span>
               <p>Years of experience</p>
             </div>
           </div>

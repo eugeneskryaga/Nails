@@ -5,7 +5,7 @@
 
 .nav {
     position: fixed;
-    width: 400px;
+    width: fit-content;
     margin: 0 auto;
     padding: 4px 20px;
     background-color: var(--color-card);
@@ -55,11 +55,16 @@
         margin-top: 40px;
         border-radius: 0;
         top: 0;
-        gap: 10px;
+        gap: 0;
         justify-content: center;
     }
 
     .nav_list {
-        gap: 10px;
+        gap: 0;
+    }
+
+    .link {
+        padding-left: 8px;
+        padding-right: 8px;
     }
 }

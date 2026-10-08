@@ -6,11 +6,14 @@ import "@fontsource/cormorant-garamond";
 import "@fontsource/plus-jakarta-sans";
 import "./index.css";
 import { BrowserRouter } from "react-router-dom";
+import { AuthProvider } from "./context/AuthContext.tsx";
 
 createRoot(document.getElementById("root") as HTMLDivElement).render(
   <StrictMode>
     <BrowserRouter>
-      <App />
+      <AuthProvider>
+        <App />
+      </AuthProvider>
     </BrowserRouter>
   </StrictMode>,
 );

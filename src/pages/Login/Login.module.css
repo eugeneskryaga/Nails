@@ -1,0 +1,55 @@
+.login_section {
+    margin-top: 160px;
+    margin-bottom: 27vh;
+}
+
+.form {
+    padding: 40px;
+    background-color: var(--color-card);
+    border-radius: 20px;
+    border: 1px solid var(--color-border);
+    width: 360px;
+    margin: 0 auto;
+}
+
+.input_container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    margin-bottom: 10px;
+
+    label {
+        color: var(--color-foreground)
+    }
+
+    input {
+        border-radius: 10px;
+        border: 1px solid var(--color-border);
+        padding: 10px 10px 10px 50px;
+    }
+
+    input:active {
+        border: 2px solid var(--color-primary);
+    }
+
+    svg {
+        position: absolute;
+        top: 46px;
+        left: 12px;
+    }
+}
+
+.btn {
+    width: 100%;
+    background-color: var(--color-primary);
+}
+
+.error {
+    color: lightcoral;
+}
+
+.login_error {
+    text-align: center;
+    margin-bottom: 10px;
+}

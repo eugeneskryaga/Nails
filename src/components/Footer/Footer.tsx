@@ -80,7 +80,7 @@ export const Footer = () => {
           </div>
         </div>
         <a
-          href="/"
+          href="/login"
           className={css.admin}
         >
           Admin login

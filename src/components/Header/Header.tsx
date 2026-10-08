@@ -4,8 +4,12 @@ import { Container } from "../Container/Container";
 import logo from "../../assets/Logo.png";
 
 import css from "./Header.module.css";
+import { useAuth } from "../../context/AuthContext";
 
 export const Header = () => {
+  const { user, logout } = useAuth();
+  const isAdmin = user?.email === import.meta.env.VITE_ADMIN_EMAIL;
+
   return (
     <header className={css.header}>
       <Container>
@@ -29,7 +33,7 @@ export const Header = () => {
             </li>
             <li>
               <NavLink
-                to="gallery"
+                to="/gallery"
                 className={({ isActive }) =>
                   isActive ? `${css.active}` : `${css.link}`
                 }
@@ -47,6 +51,18 @@ export const Header = () => {
                 Contacts
               </NavLink>
             </li>
+            {isAdmin && (
+              <li>
+                <NavLink
+                  to="/admin"
+                  className={({ isActive }) =>
+                    isActive ? `${css.active}` : `${css.link}`
+                  }
+                >
+                  Admin
+                </NavLink>
+              </li>
+            )}
           </ul>
         </nav>
       </Container>
