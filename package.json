@@ -12,6 +12,8 @@
   "dependencies": {
     "@fontsource/cormorant-garamond": "^5.3.0",
     "@fontsource/plus-jakarta-sans": "^5.3.0",
+    "firebase": "^13.0.0",
+    "firebase-tools": "^15.33.0",
     "install": "^0.13.0",
     "modern-normalize": "^3.0.1",
     "npm": "^11.21.0",

@@ -56,6 +56,7 @@
         border-radius: 0;
         top: 0;
         gap: 10px;
+        justify-content: center;
     }
 
     .nav_list {
