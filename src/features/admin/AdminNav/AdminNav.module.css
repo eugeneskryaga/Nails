@@ -1,6 +1,5 @@
 .admin_panel {
   margin-top: 120px;
-  margin-bottom: 64vh;
 }
 
 .nav {
@@ -50,4 +49,11 @@
   display: flex;
   align-items: center;
   gap: 20px;
+}
+
+@media (max-width: 767px) {
+  .nav {
+    flex-direction: column;
+    gap: 20px;
+  }
 }

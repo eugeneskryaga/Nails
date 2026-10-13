@@ -15,8 +15,16 @@ export const AdminNav = () => {
   const { user, logout } = useAuth();
   const location = useLocation();
 
-  const isStatsActive =
-    location.pathname === "/admin" || location.pathname === "/admin/stats";
+  const isGalleryActive =
+    location.pathname === "/admin" || location.pathname === "/admin/gallery";
+
+  const handleStatsBtn = () => {
+    window.open(
+      "https://analytics.google.com/",
+      "_blank",
+      "noopener,noreferrer",
+    );
+  };
 
   return (
     <section className={css.admin_panel}>
@@ -25,17 +33,8 @@ export const AdminNav = () => {
           <ul className={css.ul}>
             <li>
               <NavLink
-                to="stats"
-                className={isStatsActive ? css.active : css.link}
-              >
-                <FaChartBar size={16} /> Stats
-              </NavLink>
-            </li>
-
-            <li>
-              <NavLink
                 to="gallery"
-                className={({ isActive }) => (isActive ? css.active : css.link)}
+                className={isGalleryActive ? css.active : css.link}
               >
                 <FaImages size={16} /> Gallery
               </NavLink>
@@ -48,6 +47,14 @@ export const AdminNav = () => {
               >
                 <FaHandshake size={16} /> Services
               </NavLink>
+            </li>
+            <li>
+              <Button
+                onClick={handleStatsBtn}
+                styles="primary"
+              >
+                <FaChartBar size={16} /> Stats
+              </Button>
             </li>
           </ul>
 

@@ -6,8 +6,7 @@ import { Contacts } from "./pages/Contacts/Contacts";
 import { ProtectedRoute } from "./components/ProtectedRoute/ProtectedRoute";
 import { Login } from "./pages/Login/Login";
 import { AdminLayout } from "./layouts/AdminLayout";
-import { Stats } from "./pages/Admin/Stats/Stats";
-import { AdminGallery } from "./pages/Admin/AdminGallery/AdminGallery";
+import { GalleryAdmin } from "./pages/Admin/GalleryAdmin/GalleryAdmin";
 import { Services } from "./pages/Admin/Services/Services";
 
 export const App = () => {
@@ -37,15 +36,11 @@ export const App = () => {
           >
             <Route
               index
-              element={<Stats />}
-            />
-            <Route
-              path="stats"
-              element={<Stats />}
+              element={<GalleryAdmin />}
             />
             <Route
               path="gallery"
-              element={<AdminGallery />}
+              element={<GalleryAdmin />}
             />
             <Route
               path="services"
