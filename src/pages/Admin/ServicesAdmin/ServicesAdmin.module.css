@@ -1,0 +1,154 @@
+.adminServices {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 32px 20px;
+}
+
+.adminServices h1 {
+    margin-bottom: 28px;
+    text-align: center;
+}
+
+.adminServices>h2 {
+    margin-bottom: 20px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto 40px;
+    padding: 24px;
+    border: 1px solid #e5e5e5;
+    border-radius: 16px;
+}
+
+.form h2 {
+    margin: 0;
+}
+
+.form label {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    min-width: 0;
+    font-size: 14px;
+}
+
+.form input,
+.form select,
+.form textarea {
+    box-sizing: border-box;
+    width: 100%;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #d5d5d5;
+    border-radius: 8px;
+    font: inherit;
+}
+
+.form textarea {
+    resize: vertical;
+}
+
+.fieldsRow {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.form .checkboxLabel {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.checkboxLabel input {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.actions button {
+    padding: 10px 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.actions button:disabled {
+    opacity: 0.6;
+    cursor: wait;
+}
+
+.services {
+    display: grid;
+    gap: 14px;
+}
+
+.service {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+}
+
+.serviceInfo {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+.service h3 {
+    margin: 0 0 8px;
+}
+
+.service p {
+    margin: 0 0 8px;
+    color: #666;
+}
+
+.service p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 700px) {
+    .service {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .service .actions {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .adminServices {
+        padding: 24px 12px;
+    }
+
+    .form {
+        padding: 18px 14px;
+    }
+
+    .fieldsRow {
+        grid-template-columns: 1fr;
+    }
+
+    .actions button {
+        max-width: 100%;
+    }
+}

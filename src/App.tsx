@@ -7,7 +7,7 @@ import { ProtectedRoute } from "./components/ProtectedRoute/ProtectedRoute";
 import { Login } from "./pages/Login/Login";
 import { AdminLayout } from "./layouts/AdminLayout";
 import { GalleryAdmin } from "./pages/Admin/GalleryAdmin/GalleryAdmin";
-import { Services } from "./pages/Admin/Services/Services";
+import { ServicesAdmin } from "./pages/Admin/ServicesAdmin/ServicesAdmin";
 
 export const App = () => {
   return (
@@ -44,7 +44,7 @@ export const App = () => {
             />
             <Route
               path="services"
-              element={<Services />}
+              element={<ServicesAdmin />}
             />
           </Route>
         </Route>

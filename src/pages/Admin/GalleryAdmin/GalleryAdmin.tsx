@@ -34,7 +34,7 @@ export const GalleryAdmin = () => {
       setPosts(await getAllGalleryPosts());
     } catch (error) {
       console.error(error);
-      setMessage("Не удалось загрузить список работ.");
+      setMessage("Unable loading portfolio.");
     } finally {
       setLoading(false);
     }
@@ -69,12 +69,12 @@ export const GalleryAdmin = () => {
     setMessage("");
 
     if (!title.trim()) {
-      setMessage("Укажи название работы.");
+      setMessage("Enter work title.");
       return;
     }
 
     if (!editingPost && (!video || !photo1 || !photo2)) {
-      setMessage("Для новой работы нужны видео и две фотографии.");
+      setMessage("You need a video and 2 photos for a new post.");
       return;
     }
 
@@ -92,7 +92,7 @@ export const GalleryAdmin = () => {
           },
         });
 
-        setMessage("Работа обновлена.");
+        setMessage("Post updated.");
       } else {
         await createGalleryPost({
           title,
@@ -101,7 +101,7 @@ export const GalleryAdmin = () => {
           status,
         });
 
-        setMessage("Работа создана.");
+        setMessage("Post created");
       }
 
       resetForm();
@@ -109,7 +109,7 @@ export const GalleryAdmin = () => {
     } catch (error) {
       console.error(error);
       setMessage(
-        error instanceof Error ? error.message : "Не удалось сохранить работу.",
+        error instanceof Error ? error.message : "Unable saving post.",
       );
     } finally {
       setSaving(false);
@@ -118,7 +118,7 @@ export const GalleryAdmin = () => {
 
   async function handleDelete(post: GalleryPost) {
     const confirmed = window.confirm(
-      `Удалить работу «${post.title}» вместе с файлами?`,
+      `Remove post «${post.title}» with all files?`,
     );
 
     if (!confirmed) return;
@@ -132,28 +132,26 @@ export const GalleryAdmin = () => {
         resetForm();
       }
 
-      setMessage("Работа удалена.");
+      setMessage("Post removed.");
       await refreshPosts();
     } catch (error) {
       console.error(error);
-      setMessage(
-        "Не удалось полностью удалить работу. Проверь Storage и попробуй снова.",
-      );
+      setMessage("Unable removing post. Check Storage and try again.");
     }
   }
 
   return (
     <section className={css.adminGallery}>
-      <h1>Управление галереей</h1>
+      <h1>Gallery management</h1>
 
       <form
         className={css.form}
         onSubmit={handleSubmit}
       >
-        <h2>{editingPost ? "Редактировать работу" : "Добавить работу"}</h2>
+        <h2>{editingPost ? "Edit post" : "Add post"}</h2>
 
         <label>
-          Название работы
+          Post title
           <input
             value={title}
             onChange={event => setTitle(event.target.value)}
@@ -163,7 +161,7 @@ export const GalleryAdmin = () => {
         </label>
 
         <label>
-          Вертикальное видео {editingPost && "(необязательно)"}
+          Vertical video {editingPost && "(optional)"}
           <input
             type="file"
             accept="video/mp4,video/webm,video/quicktime"
@@ -173,7 +171,7 @@ export const GalleryAdmin = () => {
         </label>
 
         <label>
-          Первая фотография {editingPost && "(необязательно)"}
+          First photo {editingPost && "(optional)"}
           <input
             type="file"
             accept="image/*"
@@ -183,7 +181,7 @@ export const GalleryAdmin = () => {
         </label>
 
         <label>
-          Вторая фотография {editingPost && "(необязательно)"}
+          Second photo {editingPost && "(optional)"}
           <input
             type="file"
             accept="image/*"
@@ -193,15 +191,15 @@ export const GalleryAdmin = () => {
         </label>
 
         <label>
-          Статус публикации
+          Post status
           <select
             value={status}
             onChange={event =>
               setStatus(event.target.value as "draft" | "published")
             }
           >
-            <option value="draft">Черновик</option>
-            <option value="published">Опубликовано</option>
+            <option value="draft">Draft</option>
+            <option value="published">Published</option>
           </select>
         </label>
 
@@ -214,10 +212,10 @@ export const GalleryAdmin = () => {
             disabled={saving}
           >
             {saving
-              ? "Сохранение..."
+              ? "Saving..."
               : editingPost
-                ? "Сохранить изменения"
-                : "Создать публикацию"}
+                ? "Save changes"
+                : "Create post"}
           </Button>
 
           {editingPost && (
@@ -226,17 +224,17 @@ export const GalleryAdmin = () => {
               styles="secondary"
               onClick={resetForm}
             >
-              Отмена
+              Cancel
             </Button>
           )}
         </div>
       </form>
 
-      <h2>Все работы</h2>
+      <h2>All posts</h2>
 
-      {loading && <p>Загрузка...</p>}
+      {loading && <p>Loading...</p>}
 
-      {!loading && posts.length === 0 && <p>Публикаций пока нет.</p>}
+      {!loading && posts.length === 0 && <p>There is no posts yet.</p>}
 
       <div className={css.posts}>
         {posts.map(post => (
@@ -247,8 +245,7 @@ export const GalleryAdmin = () => {
             <div>
               <h3>{post.title}</h3>
               <p>
-                Статус:{" "}
-                {post.status === "published" ? "Опубликовано" : "Черновик"}
+                Status: {post.status === "published" ? "Published" : "Draft"}
               </p>
             </div>
 
@@ -258,7 +255,7 @@ export const GalleryAdmin = () => {
                 styles="secondary"
                 onClick={() => startEditing(post)}
               >
-                Редактировать
+                Edit
               </Button>
 
               <Button
@@ -266,7 +263,7 @@ export const GalleryAdmin = () => {
                 styles="secondary"
                 onClick={() => void handleDelete(post)}
               >
-                Удалить
+                Remove
               </Button>
             </div>
           </article>
